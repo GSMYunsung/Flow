@@ -14,6 +14,20 @@
         android:theme="@style/Theme.Flow"
         tools:targetApi="31">
         <activity
+            android:name=".flow_as_flow_stop.LifeCeycleFlowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".flow_as_flow_stop.AsFlowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".flow_emit_collect.EmitCollectActivity"
+            android:exported="false"
+            android:label="@string/title_activity_emit_collect"
+            android:theme="@style/Theme.Flow.NoActionBar" />
+        <activity
+            android:name=".flow_blocking_nonblocking.BlockingActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
