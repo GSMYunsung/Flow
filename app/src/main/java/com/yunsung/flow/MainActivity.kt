@@ -6,6 +6,8 @@ import android.util.Log
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flow
 
 class MainActivity : AppCompatActivity() {
@@ -14,22 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common)
 
-        CoroutineScope(Dispatchers.IO).launch {
-               launch {
-
-//                   withTimeoutOrNull(5000){
-//                       simpleFlow().collect{ user ->
-//                           Log.d("TAG", user)
-//                       }
-//                   }
-
-               }
-            }
-
         lifecycleScope.launch(Dispatchers.IO) {
-            simpleFlow().collect{ user ->
-                Log.d("TAG", user)
-            }
+            ageList.asFlow()
+                .filter { age -> age % 3 == 1}
+                .collect{
+                    age-> Log.d("TAG" , age.toString())
+                }
         }
 
         }
