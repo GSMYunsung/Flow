@@ -24,7 +24,7 @@ class FlowFilterActivity : AppCompatActivity() {
                     "Age : $age"
                 }
                 .collect{
-                        age-> Log.d("TAG" , age.toString())
+                        age-> Log.d("TAG" , age)
                 }
         }
 

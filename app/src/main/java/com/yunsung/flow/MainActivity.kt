@@ -13,17 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common)
 
-        lifecycleScope.launch(Dispatchers.IO) {
-            ageList.asFlow()
-                .filter { age -> age % 3 == 1}
-                .map { age ->
-                   "Age : $age"
-                }
-                .collect{
-                    age-> Log.d("TAG" , age.toString())
-                }
-        }
-
         }
     }
 
