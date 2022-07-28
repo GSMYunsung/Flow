@@ -13,25 +13,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common)
 
-    }
+        lifecycleScope.launch { numFlow()
+            .collectLatest {
 
-    private fun ageFlow(): Flow<Int> = ageList.asFlow()
-        .transform { age ->
-            Log.d("TAG", "${Thread.currentThread().name}")
-
-            if (age == 30) {
-                emit(age + 1)
-            } else {
-                emit(age)
+                delay(200)
+                Log.d("TAG", "Log2 : ${Thread.currentThread().name}")
+            }
             }
 
-        }.flowOn(Dispatchers.IO)
-
-    private fun simpleFlow(): Flow<String> = flow {
-        userList.forEach { user ->
-            Log.d("TAG", "${Thread.currentThread().name}")
-            emit(user)
-            delay(500)
         }
     }
+
+    private fun numFlow() : Flow<Int> = flow{
+        for( i in 1..10 ){
+            delay(100)
+            Log.d("TAG" , "Log1 : ${Thread.currentThread().name}")
+            emit(i)
+        }
+
+
 }
