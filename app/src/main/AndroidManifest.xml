@@ -14,6 +14,15 @@
         android:theme="@style/Theme.Flow"
         tools:targetApi="31">
         <activity
+            android:name=".ExceptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CombineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ZipActivity"
+            android:exported="false" />
+        <activity
             android:name=".CollectLastestActivity"
             android:exported="false" />
         <activity
