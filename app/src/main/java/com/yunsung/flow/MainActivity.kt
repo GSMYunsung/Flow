@@ -13,23 +13,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common)
 
-        lifecycleScope.launch { numFlow()
-            .collectLatest {
+            lifecycleScope.launch{
 
-                delay(200)
-                Log.d("TAG", "Log2 : ${Thread.currentThread().name}")
+               val ages = ageList.asFlow()
+                    ages.onEach{ age ->
+                        check(age < 50) {
+                            "Error on value : $age"
+                        }
+                    } .catch { e ->
+                        Log.e("TAG", e.toString())
+                    }.collect{ age ->
+                        Log.d("TAG", "Value : $age")
+                }
             }
-            }
+
+
 
         }
     }
-
-    private fun numFlow() : Flow<Int> = flow{
-        for( i in 1..10 ){
-            delay(100)
-            Log.d("TAG" , "Log1 : ${Thread.currentThread().name}")
-            emit(i)
-        }
-
-
-}
