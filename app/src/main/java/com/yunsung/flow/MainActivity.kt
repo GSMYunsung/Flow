@@ -9,22 +9,24 @@ import kotlinx.coroutines.flow.*
 
 class MainActivity : AppCompatActivity() {
 
+    @OptIn(FlowPreview::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common)
 
             lifecycleScope.launch{
-
-               val ages = ageList.asFlow()
-                    ages.onEach{ age ->
-                        check(age < 50) {
-                            "Error on value : $age"
+               val startTime = System.currentTimeMillis()
+                ageList.asFlow()
+                    .onEach { delay(1000) }
+                    .flatMapLatest { age ->
+                        userList.asFlow().map { user ->
+                            delay(500)
+                            "Age : $age - User : $user - Time : ${System.currentTimeMillis() - startTime}"
                         }
-                    } .catch { e ->
-                        Log.e("TAG", e.toString())
-                    }.collect{ age ->
-                        Log.d("TAG", "Value : $age")
-                }
+                    }.collect{
+                        Log.d("TAG", it.toString())
+                    }
+
             }
 
 
