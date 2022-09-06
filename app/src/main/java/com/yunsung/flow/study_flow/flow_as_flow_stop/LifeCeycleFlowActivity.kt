@@ -1,4 +1,4 @@
-package com.yunsung.flow.flow_as_flow_stop
+package com.yunsung.flow.study_flow.flow_as_flow_stop
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
