@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yunsung.flow">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,63 +16,63 @@
         android:theme="@style/Theme.Flow"
         tools:targetApi="31">
         <activity
-            android:name=".FlatMapLatestActivity"
+            android:name="com.yunsung.flow.study_flow.flow_map.FlatMapLatestActivity"
             android:exported="false" />
         <activity
-            android:name=".FlatMapMergeActivity"
+            android:name="com.yunsung.flow.study_flow.flow_map.FlatMapMergeActivity"
             android:exported="false" />
         <activity
-            android:name=".flow_map.FlatMapContentActivity"
+            android:name="com.yunsung.flow.study_flow.flow_map.FlatMapContentActivity"
             android:exported="false" />
         <activity
-            android:name=".ExceptionActivity"
+            android:name="com.yunsung.flow.study_flow.flow_exception.ExceptionActivity"
             android:exported="false" />
         <activity
-            android:name=".CombineActivity"
+            android:name="com.yunsung.flow.study_flow.flow_zip.CombineActivity"
             android:exported="false" />
         <activity
-            android:name=".ZipActivity"
+            android:name="com.yunsung.flow.study_flow.flow_zip.ZipActivity"
             android:exported="false" />
         <activity
-            android:name=".CollectLastestActivity"
+            android:name="com.yunsung.flow.study_flow.flow_collectLastest.CollectLastestActivity"
             android:exported="false" />
         <activity
-            android:name=".BufferActivity"
+            android:name="com.yunsung.flow.study_flow.flow_buffer.BufferActivity"
             android:exported="false" />
         <activity
-            android:name=".FlowoOnActivity"
+            android:name="com.yunsung.flow.study_flow.flow_flowon.FlowOnActivity"
             android:exported="false" />
         <activity
-            android:name=".applicationActivity"
+            android:name="com.yunsung.flow.study_flow.flow_application.ApplicationActivity"
             android:exported="false" />
         <activity
-            android:name=".TerminalActivity"
+            android:name="com.yunsung.flow.study_flow.flow_terminal.TerminalActivity"
             android:exported="false" />
         <activity
-            android:name=".TakeActivity"
+            android:name="com.yunsung.flow.study_flow.flow_take.TakeActivity"
             android:exported="false" />
         <activity
-            android:name=".TransformActivity"
+            android:name="com.yunsung.flow.study_flow.flow_transform.TransformActivity"
             android:exported="false" />
         <activity
-            android:name=".FlowFilterActivity"
+            android:name="com.yunsung.flow.study_flow.flow_filter_map.FlowFilterActivity"
             android:exported="false" />
         <activity
-            android:name=".flow_as_flow_stop.LifeCeycleFlowActivity"
+            android:name="com.yunsung.flow.study_flow.flow_as_flow_stop.LifeCeycleFlowActivity"
             android:exported="false" />
         <activity
-            android:name=".flow_as_flow_stop.AsFlowActivity"
+            android:name="com.yunsung.flow.study_flow.flow_as_flow_stop.AsFlowActivity"
             android:exported="false" />
         <activity
-            android:name=".flow_emit_collect.EmitCollectActivity"
+            android:name="com.yunsung.flow.study_flow.flow_emit_collect.EmitCollectActivity"
             android:exported="false"
             android:label="@string/title_activity_emit_collect"
             android:theme="@style/Theme.Flow.NoActionBar" />
         <activity
-            android:name=".flow_blocking_nonblocking.BlockingActivity"
+            android:name="com.yunsung.flow.study_flow.flow_blocking_nonblocking.BlockingActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".flow_ex.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
