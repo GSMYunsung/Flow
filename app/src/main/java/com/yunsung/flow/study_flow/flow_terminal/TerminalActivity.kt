@@ -1,4 +1,4 @@
-package com.yunsung.flow.flow_terminal
+package com.yunsung.flow.study_flow.flow_terminal
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
