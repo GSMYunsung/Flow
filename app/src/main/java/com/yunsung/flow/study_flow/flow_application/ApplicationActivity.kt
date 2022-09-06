@@ -1,4 +1,4 @@
-package com.yunsung.flow.flow_application
+package com.yunsung.flow.study_flow.flow_application
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
