@@ -1,4 +1,4 @@
-package com.yunsung.flow.flow_blocking_nonblocking
+package com.yunsung.flow.study_flow.flow_blocking_nonblocking
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

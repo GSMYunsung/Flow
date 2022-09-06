@@ -1,4 +1,4 @@
-package com.yunsung.flow.flow_exception
+package com.yunsung.flow.study_flow.flow_exception
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

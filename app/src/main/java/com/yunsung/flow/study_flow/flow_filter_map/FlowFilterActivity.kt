@@ -1,4 +1,4 @@
-package com.yunsung.flow.flow_filter_map
+package com.yunsung.flow.study_flow.flow_filter_map
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
